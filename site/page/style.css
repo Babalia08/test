@@ -1,0 +1,135 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    text-decoration: none;
+    list-style: none;
+
+    --color-principal: rgba(44, 54, 187, 0.65);
+    --color-secondary: rgba(44, 54, 187);
+    --color-text-light: #F0F8FF;
+    --color-light: #FFF;
+    --color-text-dark: #000;
+}
+
+body{
+    font-family: "Rubik", sans-serif;
+    background: var(--color-principal);
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+}
+
+.nav_bar .logo img {
+    width: 80px;
+    height: 80px;
+    border-radius: 15%;
+    padding: 9px;
+}
+
+.nav_bar{
+    background-color: rgba(255, 255, 255, 0.20);
+    backdrop-filter: blur(1px);
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    box-sizing: border-box;
+    top: 0;
+    position: fixed;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.nav_bar a {
+    color: var(--color-light);
+}
+
+.nav_bar .nav_links ul {
+    display: flex;
+    padding: 35px;
+}
+
+.nav_bar .nav_links ul li {
+    margin: 0 30px;
+}
+
+.nav_bar a:hover {
+    color: var(--color-text-light);
+}
+
+.nav_bar .nav_links button {
+    padding: 10px;
+    margin-top: -5px;
+    border-radius: 10px;
+    border: none;
+    background: var(--color-secondary);
+    cursor: pointer;
+}
+
+.nav_bar .nav_links button a {
+    color: aliceblue;
+}
+
+.nav_bar .logo img:hover {
+    transform: scale(1.05);
+    transition: 1s linear ;
+    cursor: pointer;
+    padding: 6.5px;
+}
+
+.nav_bar .menu-hamburger{
+    display: none;
+    position: absolute;
+    right: 0;
+    width: 90px;
+    height: 90px;
+}
+
+.nav_bar .menu-hamburger:hover {
+    transform: scale(1.02);
+    transition: 2s;
+}
+
+@media screen and (max-width: 700px) {
+    .nav_bar {
+        padding: 0;
+    }
+
+    .nav_bar .menu-hamburger {
+        display: block;
+    }
+
+    .nav_links {
+        top: 0;
+        left: 0;
+        position: absolute;
+        background-color: rgba(255, 255, 255, 0.20);
+        backdrop-filter: blur(2px);
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: -100%;
+        transition: all 0.5s ease;
+    }
+
+    .nav_bar .nav_links ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .mobile-menu {
+        margin-left: 0;
+    }
+
+    .nav_bar .nav_links ul a {
+        color: aliceblue;
+    }
+
+    .nav_bar .nav_links ul li {
+        margin: 30px 0;
+        font-size: 1.5rem;
+    }
+}
